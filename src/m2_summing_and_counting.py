@@ -7,8 +7,8 @@ A subsequent module lets you practice the ACCUMULATOR pattern in another classic
    IN GRAPHICS:   x = x + pixels
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Gerardo Santana.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 # ----------------------------------------------------------------------
@@ -21,6 +21,8 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #        -- IN the loop?
 #        -- AFTER the loop?
 # ----------------------------------------------------------------------
+import math as ma
+
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_more_cosines()
@@ -67,8 +69,13 @@ def run_test_sum_more_cosines():
     # Below this comment, add 2 more test cases of your own choosing.
     # ------------------------------------------------------------------
 
-
 def sum_more_cosines(m, n):
+    total = 0
+    for k in range(n-m+1):
+        total = total + ma.cos(m+k)
+        return total
+
+
     """
     What comes in:  The two arguments are integers m and n, with m <= n.
     What goes out:  Returns the sum
